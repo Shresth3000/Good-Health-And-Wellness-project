@@ -96,7 +96,7 @@ ul {
   background: transparent;
   border: 0;
   color: var(--text);
-  font-size: 1.1rem;
+  font-size: 2.2rem;
   cursor: pointer;
 }
 
@@ -165,8 +165,13 @@ ul {
 }
 .brand {
   margin: 0;
-  font-size: 1.1rem;
+  font-size: 2.1rem;
   color: #3b352f;
+}
+.topbar__brand {
+  font-style: normal;
+  font-size: 2.8rem;
+  font-weight: bold;
 }
 .nav {
   display: flex;
