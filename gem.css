@@ -1,0 +1,60 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 2em;
+  background-color: #fff8f0; /* Warm light white */
+  color: #6b4c2c; /* Warm dark brown */
+}
+
+h1 {
+  color: #e07b39; /* Warm light orange */
+}
+
+textarea {
+  width: 100%;
+  max-width: 600px;
+  padding: 10px;
+  border: 2px solid #f4b06d; /* Very light orange border */
+  border-radius: 6px;
+  background-color: #fffdf8; /* Off-white warm background */
+  color: #6b4c2c;
+  font-size: 1rem;
+  resize: vertical;
+  box-shadow: 0 0 8px rgba(224, 123, 57, 0.3);
+  transition: border-color 0.3s ease;
+}
+
+textarea:focus {
+  border-color: #e07b39; /* Brighten border on focus */
+  outline: none;
+}
+
+button {
+  margin-top: 10px;
+  padding: 10px 25px;
+  background-color: #f4b06d; /* Very light orange */
+  border: none;
+  border-radius: 6px;
+  color: #6b4c2c;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  box-shadow: 0 3px 6px rgba(224, 123, 57, 0.4);
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #e07b39; /* Slightly darker orange on hover */
+  color: #fff8f0;
+}
+
+#output {
+  margin-top: 1em;
+  white-space: pre-wrap;
+  padding: 15px;
+  background-color: #fff4e6; /* Light warm cream */
+  border: 1px solid #f4b06d;
+  border-radius: 6px;
+  color: #6b4c2c;
+  max-width: 600px;
+  box-shadow: inset 0 0 5px rgba(224, 123, 57, 0.1);
+}

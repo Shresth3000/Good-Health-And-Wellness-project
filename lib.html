@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Resource Library - Good Health & Well-Being</title>
+  <link rel="stylesheet" href="lib.css" />
+</head>
+<body>
+  <header>
+    <h1>Resource Library</h1>
+  </header>
+
+  <nav class="filter-buttons" aria-label="Filter resources by category">
+    <button type="button" onclick="filterResources('all')">All</button>
+    <button type="button" onclick="filterResources('activity')">Activities</button>
+    <button type="button" onclick="filterResources('video')">Videos</button>
+    <button type="button" onclick="filterResources('guide')">Guides</button>
+  </nav>
+
+  <main>
+    <section id="resourceList" class="resource-list" aria-live="polite" aria-atomic="true">
+      <!-- Resources will be dynamically inserted here -->
+    </section>
+<div class="gemini-container">
+    <section class="gemini-interaction">
+      <label for="input">Ask the AI:</label><br />
+      <textarea id="input" rows="4" cols="50" placeholder="Enter prompt here..."></textarea>
+      <br />
+      <button id="generateBtn" type="button">Generate</button>
+      <div id="output" aria-live="polite" aria-atomic="true"></div>
+    </div></section>
+  </main>
+
+  <script>
+    const resources = [
+      {
+        id: 1,
+        title: "Morning Yoga Routine",
+        category: "activity",
+        description: "A simple yoga routine to improve flexibility and reduce stress.",
+        link: "https://www.youtube.com/watch?v=EvMTrP8eRvM&ab_channel=YogawithKassandra"
+      },
+      {
+        id: 2,
+        title: "Healthy Eating Basics",
+        category: "guide",
+        description: "An easy guide to understanding balanced nutrition.",
+        link: "https://www.youtube.com/watch?v=81G22t2UHxA&ab_channel=Myprotein"
+      },
+      {
+        id: 3,
+        title: "Guided Meditation Video",
+        category: "video",
+        description: "A 20-minute video for mindfulness and relaxation.",
+        link: "https://www.youtube.com/watch?v=-2zdUXve6fQ&ab_channel=TheMindfulMovement"
+      },
+      {
+        id: 4,
+        title: "Cardio Workout Plan",
+        category: "activity",
+        description: "A 30-minute cardio workout to boost heart health.",
+        link: "https://www.youtube.com/watch?v=50kH47ZztHs&ab_channel=BodyProject"
+      },
+      {
+        id: 5,
+        title: "Sleep Hygiene Tips",
+        category: "guide",
+        description: "Tips to improve your sleep quality naturally.",
+        link: "https://www.youtube.com/watch?v=aaL6bf9xxKk&ab_channel=HealthHub"
+      }
+    ];
+
+    function displayResources(category) {
+      const container = document.getElementById('resourceList');
+      container.innerHTML = '';
+
+      const filtered = category === 'all' ? resources : resources.filter(r => r.category === category);
+
+      if (filtered.length === 0) {
+        container.innerHTML = '<p>No resources found.</p>';
+        return;
+      }
+
+      filtered.forEach(resource => {
+        const card = document.createElement('article');
+        card.className = 'resource-card';
+        card.innerHTML = `
+          <h2 class="resource-title">${resource.title}</h2>
+          <p class="resource-description">${resource.description}</p>
+          <a class="resource-link" href="${resource.link}" target="_blank" rel="noopener noreferrer">View Resource</a>
+        `;
+        container.appendChild(card);
+      });
+    }
+
+    function filterResources(category) {
+      displayResources(category);
+    }
+
+    // Initialize by displaying all resources
+    displayResources('all');
+  </script>
+
+  <script src="gem.js"></script>
+</body>
+</html>
