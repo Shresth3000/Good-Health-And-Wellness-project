@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>  Meal & Workout Suggestion</title>
+  <link rel="stylesheet" href="prj2.css">
+</head>
+<body>
+  <div class="container">
+    <h1> Workout & Meal Plans</h1>
+    <p class="subtitle">Get quick healthy meal & workout ideas</p>
+
+  
+    <div class="card">
+      <h2> Meal Suggestion</h2>
+      <input type="text" id="ingredientInput" placeholder="Enter ingredients (e.g. eggs, spinach)">
+      <button onclick="getMeal()">Find Meal</button>
+      <div class="result" id="mealResult"></div>
+    </div>
+
+ 
+    <div class="card">
+      <h2> Workout Suggestion</h2>
+      <input type="number" id="timeInput" placeholder="Time (mins)">
+      <select id="energyInput">
+        <option value="">Energy Level</option>
+        <option value="low">Low</option>
+        <option value="medium">Medium</option>
+        <option value="high">High</option>
+      </select>
+      <button onclick="getWorkout()">Find Workout</button>
+      <div class="result" id="workoutResult"></div>
+    </div>
+  </div>
+
+  <script src="prjj.js"></script>
+</body>
+</html>
