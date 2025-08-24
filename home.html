@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Serenity Wellness</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Sidebar -->
+  <aside id="sidebar" class="sidebar" aria-hidden="true">
+    <div class="sidebar__header">
+      <h2 class="brand">Serenity Wellness</h2>
+      <button id="closeSidebarBtn" class="icon-btn" aria-label="Close menu" aria-controls="sidebar" aria-expanded="true">
+        ✕
+      </button>
+    </div>
+    <nav aria-label="Primary">
+      <ul class="nav">
+        <li><a href="#home" class="nav__link">Home</a></li>
+        <li><a href="#healthtips" class="nav__link">Health Tips</a></li>
+        <li><a href="#nutrition" class="nav__link">Nutrition</a></li>
+        <li><a href="#mindfulness" class="nav__link">Mindfulness</a></li>
+        <li><a href="tools.html" class="nav__link">Tools</a></li>
+        <li><a href="#about" class="nav__link">About</a></li>
+      </ul>
+    </nav>
+    <div class="sidebar__footer">
+      <a href="#" class="small-link">Privacy</a>
+      <a href="#" class="small-link">Terms</a>
+    </div>
+  </aside>
+
+  <!-- Overlay -->
+  <div id="overlay" class="overlay" hidden></div>
+
+  <!-- Page -->
+  <header class="topbar">
+    <button id="openSidebarBtn" class="hamburger" aria-label="Open menu" aria-controls="sidebar" aria-expanded="false">
+      <span class="hamburger__bar"></span>
+      <span class="hamburger__bar"></span>
+      <span class="hamburger__bar"></span>
+    </button>
+    <a href="#home" class="topbar__brand">Serenity Wellness</a>
+    <a href="#contact" class="topbar__cta btn btn--ghost">Get Started</a>
+  </header>
+
+  <main id="home" class="main">
+    <!-- Hero -->
+    <section class="hero">
+      <section id="latest-news">
+    <h2>Latest Health News</h2>
+    <div class="carousel-wrapper">
+    <div class="carousel" id="news"></div></div>
+  </section>
+      
+    </section>
+
+    <!-- Highlights -->
+    <section id="programs" class="grid">
+      <article class="card">
+        <h3>Movement & Fitness</h3>
+        <p>Low-impact flows, strength, and mobility sessions designed by certified coaches.</p>
+        <a href="#" class="text-link">Browse classes →</a>
+      </article>
+      <article id="nutrition" class="card">
+        <h3>Nutrition Plans</h3>
+        <p>Balanced meal guides and recipes with options for vegetarian, vegan, and gluten-free.</p>
+        <a href="#" class="text-link">View plans →</a>
+      </article>
+      <article id="mindfulness" class="card">
+        <h3>Mindfulness</h3>
+        <p>Guided meditations, breathwork, and sleep audios to reset and recharge.</p>
+        <a href="#" class="text-link">Try a session →</a>
+      </article>
+      <article id="community" class="card">
+        <h3>Community</h3>
+        <p>Join challenges, track progress, and connect in a supportive space.</p>
+        <a href="#" class="text-link">Meet the community →</a>
+      </article>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="contact">
+      <h2>Feedback</h2>
+      <form class="form" autocomplete="on">
+        <div class="form__row">
+          <label for="name">Name</label>
+          <input id="name" name="name" placeholder="Full name" required />
+        </div>
+        <div class="form__row">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" placeholder="name@example.com" required />
+        </div>
+        <div class="form__row">
+          <label for="goal"></label>
+          <textarea placeholder="Give us Feedback"></textarea>
+        </div>
+        <button class="btn">Submit</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© Serenity Wellness • All rights reserved</p>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
