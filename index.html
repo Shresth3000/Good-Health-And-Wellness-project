@@ -127,7 +127,7 @@
 
    
         <div class="button_container">
-          <button type="submit" onclick="window.location.href='home.html'" >Register Now</button>
+          <button type="submit" >Register Now</button>
         </div>
       </form>
     </div>
@@ -147,6 +147,17 @@
     }
     setInterval(displayTime, 1000);
     displayTime(); 
+    document.querySelector('form').addEventListener('submit', function (e) {
+  if (!this.checkValidity()) {
+    e.preventDefault();
+    alert('Please fill all required fields.');
+  } else {
+    e.preventDefault();
+    // Replace with your own post-submit logic or AJAX here if needed
+    window.location.href = 'home.html'; // redirect only on success!
+  }
+});
+
   </script>
 
 </body>
