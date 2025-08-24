@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tools</title>
+  <style>
+    :root {
+      --bg: #fffaf5;
+      --panel: #ffffff;
+      --text: #2b2b2b;
+      --muted: #6c6a68;
+      --accent: #ff8c61;
+      --shadow: 0 10px 30px rgba(40, 30, 20, 0.08);
+      --radius: 14px;
+      --line: #f0e5dc;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      background: var(--bg);
+      margin: 0; 
+      color: var(--text);
+      padding: 2rem 1rem;
+      max-width: 960px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    h1 {
+      text-align: center;
+      color: var(--accent);
+      margin-bottom: 2rem;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .card {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 1.5rem;
+      box-shadow: var(--shadow);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: box-shadow 0.3s ease;
+      cursor: pointer;
+    }
+    .card:hover {
+      box-shadow: 0 15px 35px rgba(255, 140, 97, 0.25);
+    }
+    .card h2 {
+      margin-top: 0;
+      margin-bottom: 1rem;
+      font-size: 1.25rem;
+      color: var(--accent);
+    }
+    .card p {
+      flex-grow: 1;
+      color: var(--muted);
+      margin-bottom: 1rem;
+    }
+    .card button {
+      background: var(--accent);
+      border: none;
+      border-radius: 8px;
+      color: white;
+      font-weight: 600;
+      font-size: 1rem;
+      padding: 0.65rem 1rem;
+      cursor: pointer;
+      transition: background 0.2s ease;
+    }
+    .card button a{
+      background: var(--accent);
+      border: none;
+      border-radius: 8px;
+      color: white;
+      font-weight: 600;
+      font-size: 1rem;
+      padding: 0.65rem 1rem;
+      cursor: pointer;
+      transition: background 0.2s ease;
+      text-decoration: none;
+    }
+    .card button:hover {
+      background: #e57243;
+    }
+  </style>
+</head>
+<body>
+  <h1>Wellness Tools</h1>
+
+  <div class="cards">
+    <div class="card" tabindex="0" role="button" aria-pressed="false">
+      <h2>BMI Calculator</h2>
+      <p>Add your BMI Calculator tool here.</p>
+      <button><a href="bmi.html">Calculate</a></button>
+    </div>
+
+    <div class="card" tabindex="0" role="button" aria-pressed="false">
+      <h2>Daily Habit Tracker</h2>
+      <p>Add your Daily Habit Tracker tool here.</p>
+      <button><a href="symptom.html">Track</a></button>
+    </div>
+
+    <div class="card" tabindex="0" role="button" aria-pressed="false">
+      <h2>Meditation Timer</h2>
+      <p>Add your Meditation Timer tool here.</p>
+      <button><a href="bmi.html">Start</a></button></button>
+    </div>
+  </div>
+</body>
+</html>
