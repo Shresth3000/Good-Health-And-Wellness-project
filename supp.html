@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Healthcare Products & Supplements</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f8fa;
+      margin: 0;
+      padding: 20px;
+      text-align: center;
+    }
+    .btn-healthcare {
+      background-color: #27ae60;
+      color: white;
+      padding: 15px 30px;
+      border: none;
+      border-radius: 8px;
+      font-size: 18px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      margin-top: 40px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+    .btn-healthcare:hover {
+      background-color: #1e8449;
+    }
+    #healthcareProducts {
+      max-width: 800px;
+      margin: 40px auto 0 auto;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      display: block;
+      text-align: left;
+    }
+    #healthcareProducts h2 {
+      color: #27ae60;
+      margin-bottom: 15px;
+      text-align: center;
+    }
+    .product-list {
+      list-style: none;
+      padding: 0;
+    }
+    .product-list li {
+      border-bottom: 1px solid #ddd;
+      padding: 15px 0;
+    }
+    .product-list li:last-child {
+      border-bottom: none;
+    }
+    .product-name {
+      font-weight: bold;
+      font-size: 18px;
+      color: #2c3e50;
+    }
+    .product-description {
+      font-size: 14px;
+      color: #555;
+      margin-top: 5px;
+    }
+    .product-link {
+      display: inline-block;
+      margin-top: 10px;
+      color: #2980b9;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .product-link:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Good Health & Well-Being</h1>
+
+  <button class="btn-healthcare" onclick="showHealthcareProducts()">
+    Explore Healthcare Products & Supplements
+  </button>
+
+  <div id="healthcareProducts">
+    <h2>Healthcare Products & Supplements</h2>
+    <ul class="product-list">
+      <li>
+        <div class="product-name">High Protein Oats</div>
+        <div class="product-description">Feel satiated for longer with satisfying protein in each spoonful.</div>
+        <a class="product-link" href="https://www.muscleblaze.com/sv/muscleblaze-high-protein-oats/SP-98284?navKey=VRNT-201886&itracker=w:brandCatalog||;p:15|;e:201886|;" target="_blank" rel="noopener">Buy Now</a>
+      </li>
+      <li>
+        <div class="product-name">Omega-3 Fish Oil</div>
+        <div class="product-description">Supports heart and brain health.</div>
+        <a class="product-link" href="https://www.muscleblaze.com/sv/muscleblaze-omega-3-fish-oil-1000-mg-with-180mg-epa-and-120mg-dha/SP-36756?navKey=VRNT-90655&itracker=w:search||searchedTerm-omega|;" target="_blank" rel="noopener">Buy Now</a>
+      </li>
+      <li>
+        <div class="product-name">High Protein Peanut Butter</div>
+        <div class="product-description">With 30g protein this product is a great source of protein for fulfilling your daily protein needs</div>
+        <a class="product-link" href="https://www.muscleblaze.com/sv/muscleblaze-high-protein-peanut-butter/SP-58705?navKey=VRNT-191448&itracker=w:brandCatalog||;p:24|;e:191448|;" target="_blank" rel="noopener">Buy Now</a>
+      </li>
+      <li>
+        <div class="product-name">Probiotics Muesli</div>
+        <div class="product-description">Promotes digestive health and balance.</div>
+        <a class="product-link" href="https://www.muscleblaze.com/sv/muscleblaze-probiotic-muesli/SP-89293?srsltid=AfmBOorGBPPpgoyrWqsMSAncPwGw9IzwS25F7eNYoaqIY0CbIz-BY6PU" target="_blank" rel="noopener">Buy Now</a>
+      </li>
+    </ul>
+  </div>
+
+  <script>
+    function showHealthcareProducts() {
+      const productsDiv = document.getElementById('healthcareProducts');
+      if (productsDiv.style.display === 'none' || productsDiv.style.display === '') {
+        productsDiv.style.display = 'block';
+      } else {
+        productsDiv.style.display = 'none';
+      }
+    }
+  </script>
+
+</body>
+</html>
